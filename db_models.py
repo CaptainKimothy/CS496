@@ -26,5 +26,5 @@ class Participant(Model):
 	age = ndbIntegerProperty()
 	tent = ndb.StringProperty()
 	vehicle = ndb.StringProperty()
-	bringing = ndb.StringProperty(repeated = True)
+	bringing[] = ndb.StringProperty(repeated = True)
 	job = ndb.StringProperty(repeated = True)
