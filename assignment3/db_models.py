@@ -6,13 +6,14 @@ class Model(ndb.Model):
 		d['key'] = self.key.id()
 		return d
 
-class ThemeCamp(Model)
+class ThemeCamps(Model)
 	name = ndb.StringProperty(required = True)
 	participants = ndb.KeyProperty(repeated = True)
 	meals = ndb.StringProperty(repeated = True)
 	vehicles = ndb.StringProperty(repeated = True)
-	location = ndb.StringProperty(required = True)
 	jobs = ndb.StringProperty(repeated = True)
+	tents = ndb.StringProperty(repeated = True)
+	location = ndb.StringProperty(required = True)
 
 	def to_dict(self):
 		d = super(Participant,self).to_dict()
@@ -21,6 +22,7 @@ class ThemeCamp(Model)
 
 class Participant(Model):
 	name = ndb.StringProperty(required = True)
+	email = ndb.StringProperty()
 	age = ndbIntegerProperty()
 	tent = ndb.StringProperty()
 	vehicle = ndb.StringProperty()
