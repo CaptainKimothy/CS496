@@ -8,5 +8,5 @@ app = webapp2.WSGIApplication([
 		], debug=True)
 app.router.add(webapp2.Route(r'/participant/<id:[0-9]+><:/?>', 'participant.Participant'))
 app.router.add(webapp2.Route(r'/participant/search', 'participant.ParticipantSearch'))
-app.router.add(webapp2.Route(r'/ThemeCamp', 'themecamp.ThemeCamp'))
-app.router.add(webapp2.Route(r'/ThemeCamp/<cid:[0-9]+>/participant/<pid:[0-9]+></?>', 'themecamp.ThemeCampParticipants'))
+app.router.add(webapp2.Route(r'/ThemeCamps', 'themecamps.ThemeCamps'))
+app.router.add(webapp2.Route(r'/ThemeCamps/<cid:[0-9]+>/participant/<pid:[0-9]+></?>', 'themecamps.CampParticipants'))
