@@ -27,4 +27,4 @@ class Participant(Model):
 	tent = ndb.StringProperty()
 	vehicle = ndb.StringProperty()
 	bringing[] = ndb.StringProperty(repeated = True)
-	job = ndb.StringProperty(repeated = True)
+	job = ndb.StringProperty()
