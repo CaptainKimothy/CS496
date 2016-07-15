@@ -6,7 +6,7 @@ class Model(ndb.Model):
 		d['key'] = self.key.id()
 		return d
 
-class ThemeCamps(Model)
+class ThemeCamps(Model):
 	name = ndb.StringProperty(required = True)
 	participants = ndb.KeyProperty(repeated = True)
 	meals = ndb.StringProperty(repeated = True)
